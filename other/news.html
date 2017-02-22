@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./JS/jquery-1.12.4.js"></script>
+    <script src="./JS/angular.min.js"></script>
+
+    <style>
+        body {
+            background: url('./images/background-news.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: #fff;
+            background-color: #333;
+            font-family: 'microsoft yahei', Arial, sans-serif;
+        }
+        
+        .date {
+            color: #fff;
+            display: block;
+            margin-left: 20%;
+        }
+        
+        .page-header h1 {
+            display: block;
+            margin-left: 10%;
+        }
+        
+        .box {
+            margin-left: 10%;
+        }
+        
+        .box li {
+            text-align: center;
+            list-style: none;
+            margin-top: 20px;
+            margin-left: 10%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .box li h3,
+        p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body ng-app="App">
+    <div ng-controller="NewsCtrl">
+        <div class="page-header">
+            <h1>今日看点</h1>
+            <p class="date">{{today}}</p>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="col-lg-8 col-md-6 col-xs-6" ng-repeat="news in more.pagebean.contentlist">
+                    <h3 style="color:white">{{news.title}}</h3>
+                    <p style="color:#ccc;font-size:14px;">{{news.desc}}</p>
+                    <p style="color:darkgrey">{{news.source}}</p>
+                    <p style="color:darkslategray">{{news.pubDate}}</p>
+                    <p><a href="{{news.link}}" class="btn btn-default" role="button">了解详情</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var App = angular.module('App', []);
+    App.controller('NewsCtrl', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
+
+        var today = $filter('date')(new Date, 'yyyy-MM-dd');
+        $scope.today = today;
+
+        $http({
+            url: 'http://route.showapi.com/109-35',
+            params: {
+                showapi_appid: '32305',
+                showapi_sign: '85029253e76742c2ba637ce1e1eb46a2',
+                page: 5,
+                maxResult: 20
+            }
+        }).success(function(info) {
+            $scope.more = info.showapi_res_body;
+        });
+    }])
+</script>
+
+</html>

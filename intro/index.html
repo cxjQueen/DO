@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>This is my choice</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Hello</h1>
+                <h3>This is my choice</h3>
+                <p>
+                    <small>Rrite by <a href="http://cxjQueen.gihub.io">Jarcia</a></small>
+                </p>
+            </section>
+
+            <!-- Example of nested vertical slides -->
+            <section>
+                <h2>About Myself</h2>
+                <p>My name is Cuixuejia.</p>
+                <p>25 years old.</p>
+                <br>
+                <img width="178" height="238" src="./images/IMG_2270.jpg">
+            </section>
+
+            <section>
+                <h2>工作经验</h2>
+                <p>
+                    4年，
+                    <p>
+                        1年web前端相关工作。
+                    </p>
+                </p>
+            </section>
+
+            <section>
+                <h2>求职意向</h2>
+                <div style="margin: 50px 0 0 250px;font-size:30px;text-align: left">
+                    <p>工作性质： 全职</p>
+                    <p>期望职业： WEB前端开发</p>
+                    <p>期望月薪： 10001-15000元/月</p>
+                    <p>目前状况： 我目前处于离职状态，可立即上岗</p>
+                </div>
+            </section>
+            <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+                <h2>职业技能</h2>
+                <div style="margin: 50px 0 0 150px;font-size:30px;text-align: left">
+                    <p>☆ 具备良好的代码编程习惯及较强的文档编写能力</p>
+                    <p>☆ 了解css、css3、DIV布局，盒子模型</p>
+                    <p>☆ 了解html5新特性，新标签、canvas的使用</p>
+                    <p>☆ 了解ajax交互方式并熟练使用</p>
+                    <p>☆ 有Bootstrap、angularJS等前端主流框架的使用经验</p>
+                    <p>☆ 有Git代码管理工具的使用经验</p>
+                    <p>☆ 有工程化的开发思想，熟练使用less效率工具</p>
+                </div>
+            </section>
+            <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+                <h2>自我推荐</h2>
+                <div style="margin: 50px 0 0 150px;font-size:30px;text-align: left">
+                    <p>☆ 良好的自我管理能力和团队合作意识，对前端技术及用户体验细心负责</p>
+                    <p>☆ 对IT领域的知识有浓厚的兴趣，善于分析、归纳并解决问题，有良好的组织、协调和沟通能力</p>
+                    <p>☆ 表达能力较强，乐观开朗，能承受较大的工作压力，喜欢钻研新技术，敢于面对和克服困难，乐意为企业尽心竭力</p>
+                    <p>☆ 性格活泼，在重压力工作下可保持开朗心态，活跃团队气氛</p>
+                    <p>☆ 喜欢旅游，丰富人生阅历，在不同城市中体验不同生活，保持自己追求向上的脚步</p>
+                </div>
+            </section>
+            <section style="text-align: left;">
+                <h1>THE END</h1>
+                <p>
+                    Thank you for watching!
+                </p>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+
+</body>
+
+</html>

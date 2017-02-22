@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base target="_blank">
+    <title>You can try everything!</title>
+    <!--引入css-->
+    <link rel="stylesheet" href="./public/less＆css/base.css">
+    <link rel="stylesheet" href="./public/less＆css/index.css">
+    <!--引入bootstarp-->
+    <link rel="stylesheet" href="./public/resource/bootstrap/css/bootstrap.min.css">
+    <!--js-->
+    <script src="./public/js/mian.js"></script>
+    <!--jQuery-->
+    <script src="./public/js/jquery-1.12.4.js"></script>
+    <!--bootstrap js-->
+    <script src="./public/resource/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./public/resource/bootstrap"></script>
+
+</head>
+
+<body id="bg-body" scroll="no">
+    <!--part one top-->
+    <top>
+        <!--nav start-->
+        <nav class="top-nav navbar-fixed-top">
+            <ul>
+                <li><a href="javascript:void(0);">Myself</a></li>
+                <li><a href="javascript:void(0);">Projects</a></li>
+                <li><a href="javascript:void(0);">Work</a></li>
+                <li class="hidden-xs"><a href="javascript:void(0);">Hobby</a></li>
+                <li class="hidden-xs"><a href="javascript:void(0);"> · · ·</a></li>
+
+            </ul>
+            <!--login start-->
+            <login>
+                <button class="btn btn-danger btn-primary" data-toggle="modal" data-target="#myModal">Login</button>
+                <a href="./web/sign-in.html"><button  class="btn btn-default">Sign in</button></a>
+            </login>
+            <!--login end-->
+        </nav>
+        <!--nav end-->
+    </top>
+    <!--show-->
+    <div class="show-something">
+        <div class="row">
+            <div class="col-md-12 clearfix">
+                <div class="thumbnail show-content">
+                    <img src="./public/images/show1.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="color: white">About Myself</h3>
+                        <p>
+                            <a href="./intro/index.html" class="btn btn-default" style="background-color: rgba(233,233,233,.6)" role="button">Have a look</a></p>
+                    </div>
+                </div>
+                <div class="thumbnail show-content">
+                    <img src="./public/images/show2.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="color: white">What's the weather today?</h3>
+                        <p>
+                            <a href="./other/weather.html" class=" btn btn-default " style="background-color: rgba(233,233,233,.6) " role="button ">Have a look</a></p>
+                    </div>
+                </div>
+                <div class="thumbnail show-content ">
+                    <img src="./public/images/show3.jpg " alt="... ">
+                    <div class="caption ">
+                        <h3 style="color: white ">News Attention</h3>
+                        <p>
+                            <a href="./other/news.html " class="btn btn-default " style="background-color: rgba(233,233,233,.6) " role="button ">Have a look</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/show-->
+    <!--login&sign in-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Email address</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group ">
+                            <label for="exampleInputEmail1 ">Login</label>
+                            <input type="email " class="form-control " id="exampleInputEmail1 " placeholder="Email ">
+                        </div>
+                        <div class="form-group ">
+                            <label for="exampleInputPassword1 ">Password</label>
+                            <input type="password " class="form-control " id="exampleInputPassword1 " placeholder="Password ">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="./index.html "><button type="button " class="btn btn-primary ">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/modal-->
+
+    <!--/login&sign in-->
+
+</body>
+
+
+</html>

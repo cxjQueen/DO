@@ -1,0 +1,51 @@
+@charset "utf-8";
+body {
+    background: url('../images/background-weather.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-color: #333;
+    font-family: 'microsoft yahei', Arial, sans-serif;
+}
+
+.citys {
+    border: 1px solid #666;
+    border-radius: 7%;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 10%;
+    height: 30px;
+    margin-left: 5%;
+    padding: 5px 10px;
+}
+
+.weather {
+    margin-left: 3px;
+}
+
+.weather li {
+    border: 1px solid #1c7ab0;
+    background-color: rgba(0, 0, 0, 0.6);
+    float: left;
+    list-style: none;
+    width: 15%;
+    height: 450px;
+    margin-left: 4%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.weather li h4 {
+    margin-top: 10%;
+}
+
+.weather li span {
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.weather li p {
+    margin-top: 3%;
+}

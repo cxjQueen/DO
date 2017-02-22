@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./JS/angular.min.js"></script>
+    <style>
+        @import url('http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.min.css');
+        body {
+            background: url('./images/background-photo-mobile-devices.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: #fff;
+            background-color: #333;
+            font-family: 'microsoft yahei', Arial, sans-serif;
+        }
+        
+        #hot-movie {
+            margin: 5px 5px;
+        }
+        
+        .thumbnail {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body ng-app="App">
+    <div ng-controller="MovieCtrl" id="hot-movie">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="movie in movies">
+                <div class="thumbnail">
+                    <img ng-src="{{movie.cover}}">
+                    <div class="caption" style="text-align: center">
+                        <h3>{{movie.title}}</h3>
+                        <p style="color:#999">{{movie.tag}}</p>
+                        <p style="color:red">{{movie.cover}}</p>
+                        <p><a href="#" class="btn btn-default" role="button">了解详情</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var App = angular.module('App', []);
+    App.controller('MovieCtrl', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
+
+        // var today = $filter('date')(new Date, 'yyyy-MM-dd'); //需要$scope定义一下，获取到today数据
+        // $scope.today = today; //$scope.today出来的数据，today用{{}}引起来，直接添加到页面中，
+
+        $http({
+            url: 'http://op.juhe.cn/onebox/movie/video',
+            params: {
+                key: '3af6e75e2d59dd95819076b18e53dbd4',
+                dtype: 'json'
+            }
+        }).success(function(info) {
+            console.log(info);
+            $scope.movies = info.result;
+        });
+
+    }])
+</script>
+
+</html>

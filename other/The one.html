@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/The-one.css">
+</head>
+
+<body>
+    <header class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1><a href="#" title="scroll down for your viewing pleasure">I like Movie Movie</a></h1>
+                </div>
+            </div>
+            <!-- Slider -->
+            <br><br>
+            <h4 class="text-center">张家辉</h4>
+            <br><br>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span9 offsetHalf1" id="slider">
+                        <!-- Top part of the slider -->
+                        <div class="row-fluid">
+                            <div id="carousel-bounding-box">
+                                <div id="myCarousel" class="carousel slide">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="0"><img class="img-rounded" src="./images/one.jpg"></div>
+                                        <div class="item" data-slide-number="1"><img class="img-rounded" src="./images/two.jpg"></div>
+                                        <div class="item" data-slide-number="2"><img class="img-rounded" src="./images/three.jpg"></div>
+                                        <div class="item" data-slide-number="3"><img class="img-rounded" src="./images/four.jpg"></div>
+                                        <div class="item" data-slide-number="4"><img class="img-rounded" src="./images/five.jpg"></div>
+                                        <div class="item" data-slide-number="5"><img class="img-rounded" src="./images/six.jpg"></div>
+                                    </div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <br>
+                                <div class="carousel-controls-mini">
+                                    <a href="#myCarousel" data-slide="prev">‹</a>
+                                    <a href="#myCarousel" data-slide="next">›</a>
+                                </div>
+                            </div>
+                            <div class="span4" id="carousel-text"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br><br>
+            </div>
+            <!--/Slider-->
+        </div>
+    </header>
+    <br><br><br>
+
+    <div class="container">
+        <br>
+        <div class="row-fluid">
+            <div class="span10 offsetHalf">
+
+                <i class="icon-screenshot icon-5x" style="color:#ee1111;"></i>
+            </div>
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <div class="row-fluid">
+            <h1 class="pull-center"><strong>BOOTSTRAP</strong></h1>
+            <p class="lead pull-center">单页面模板</p>
+        </div>
+        <br><br><br><br>
+
+        <div class="row-fluid">
+            <h3 class="pull-center">特性</h3>
+        </div>
+        <br><br>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="span3 block block-sm offsetHalf1">
+                    <h2>开发</h2>
+                    使用极客代码录播
+                </div>
+                <div class="span3 block block-sm">
+                    <h2>设计</h2>
+                    使用极客代码录播分享代码和设计
+                </div>
+                <div class="span3 block block-sm">
+                    <h2>社区</h2>
+                    使用极客标签社区
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+    <div class="row-fluid">
+        <div class="span5 block">
+            <div class="pull-center">
+                <h1>最热电影</h1>
+                <button class="btn btn-primary btn-flat">立刻查看<i class="pull-right icon-chevron-right icon-large"></i></button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <!-- 推荐开源CDN来选取需引用的外部JS -->
+    <script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.gbtags.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+        $('#nav').affix({
+            offset: {
+                top: $('header').height()
+            }
+        });
+
+        $('#sidebar').affix({
+            offset: {
+                top: 500
+            }
+        });
+    </script>
+
+</body>
+
+</html>
